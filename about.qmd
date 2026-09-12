@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+## About the Project
+
+This project analyzes physical profiles across Major League Baseball teams, focusing on how many teams share the same count of physically similar teammates (matching height and weight).
+
+Created by Michael Maynes as part of Milestone 4 for *Preceptor's Primer for Bayesian Data Science*.
+
+Project repository: [GitHub Repository](https://github.com/michaelmaynes6/milestone-4)

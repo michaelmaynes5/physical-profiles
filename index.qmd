@@ -1,0 +1,56 @@
+---
+title: "Physical Look-Alikes Across MLB Teams"
+author: "Michael Maynes"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+
+# Read the player data collected from the 2024 MLB season
+players <- read_csv("data/players.csv", show_col_types = FALSE)
+
+# Identify teammates sharing the same height and weight
+lookalikes <- players |>
+  group_by(team_name, height_inches, weight) |>
+  filter(n() > 1) |>
+  ungroup()
+
+# Count the number of look-alike players per team
+team_counts <- lookalikes |>
+  group_by(team_name) |>
+  summarize(n_lookalikes = n())
+
+# Count how many teams have the exact same number of look-alikes
+team_distribution <- team_counts |>
+  count(n_lookalikes, name = "num_teams")
+```
+
+## How Many Teams Share the Same Number of Similar Players?
+
+In baseball, physical traits such as height and weight often cluster around position requirements. Here, we define "look-alikes" as teammates who share identical height (in inches) and weight (in pounds).
+
+We then examine **how many MLB teams have the exact same number of physically similar players**.
+
+```{r}
+ggplot(team_distribution, aes(x = factor(n_lookalikes), y = num_teams)) +
+  geom_col(fill = "steelblue") +
+  geom_text(aes(label = num_teams), vjust = -0.5, size = 4) +
+  labs(
+    title = "Number of MLB Teams by Count of Physically Matching Players",
+    subtitle = "Matches defined as teammates sharing identical height and weight",
+    x = "Number of Matching Players on Team",
+    y = "Number of MLB Teams",
+    caption = "Source: 2024 MLB Player Data"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.title = element_text(face = "bold")
+  )
+```
+
+The distribution shows that **6 teams** share the exact same count of 10 matching players (Atlanta Braves, Kansas City Royals, Los Angeles Dodgers, New York Yankees, Oakland Athletics, and Tampa Bay Rays), while **4 teams** each have 6 matching players.
