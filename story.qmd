@@ -1,0 +1,15 @@
+---
+title: "The Story: Shapes of the Game"
+---
+
+## Physical Archetypes in Baseball
+
+Baseball has always been a game of specialized roles. Unlike sports where athletes converge on a single ideal body type, baseball demands vastly different physical profiles depending on what each position requires on the field.
+
+When we inspect height and weight across positions, distinct physical archetypes immediately stand out:
+
+- **Pitchers** dominate the upper bounds of height, using longer levers and arm extension to generate velocity and steep release angles towards home plate.
+- **Catchers and First Basemen** carry greater mass relative to their height, providing durability behind the plate and power at the corners.
+- **Middle Infielders (Second Basemen and Shortstops)** cluster tightly in the lower-left corner of height and weight distributions, prioritizing agility, quick lateral acceleration, and swift transfer times over raw size.
+
+Looking at these physical groupings reveals how role specialization shapes the roster of modern Major League Baseball.

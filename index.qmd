@@ -1,5 +1,5 @@
 ---
-title: "Physical Look-Alikes Across MLB Teams"
+title: "Physical Profiles Across MLB Positions"
 author: "Michael Maynes"
 execute:
   echo: false
@@ -12,28 +12,11 @@ library(tidyverse)
 
 # Read the player data collected from the 2024 MLB season
 players <- read_csv("data/players.csv", show_col_types = FALSE)
-
-# Identify teammates sharing the same height and weight
-lookalikes <- players |>
-  group_by(team_name, height_inches, weight) |>
-  filter(n() > 1) |>
-  ungroup()
-
-# Count the number of look-alike players per team
-team_counts <- lookalikes |>
-  group_by(team_name) |>
-  summarize(n_lookalikes = n())
-
-# Count how many teams have the exact same number of look-alikes
-team_distribution <- team_counts |>
-  count(n_lookalikes, name = "num_teams")
 ```
 
-## How Many Teams Share the Same Number of Similar Players?
+## How Does Player Physique Vary by Position?
 
-In baseball, physical traits such as height and weight often cluster around position requirements. Here, we define "look-alikes" as teammates who share identical height (in inches) and weight (in pounds).
-
-We then examine **how many MLB teams have the exact same number of physically similar players**.
+This scatter plot visualizes the physical profiles of Major League Baseball players active during the 2024 season, sourced from official MLB roster data. Each point represents an individual player plotted by their height in inches along the horizontal axis and their weight in pounds along the vertical axis, colored by their fielding position. Points are slightly jittered to make overlapping body types visible.
 
 ```{r}
 ggplot(players, aes(x = height_inches, y = weight, color = position)) +
@@ -52,4 +35,7 @@ ggplot(players, aes(x = height_inches, y = weight, color = position)) +
   )
 ```
 
-The distribution shows that **6 teams** share the exact same count of 10 matching players (Atlanta Braves, Kansas City Royals, Los Angeles Dodgers, New York Yankees, Oakland Athletics, and Tampa Bay Rays), while **4 teams** each have 6 matching players.
+The visualization demonstrates that while height and weight correlate generally, coloring by position reveals distinct physical archetypes across the diamond. Middle infielders—second basemen and shortstops—cluster tightly near the lower-left region (typically 5'9" to 6'1" and 170 to 200 pounds), where lateral quickness and rapid transitions matter most. In contrast, first basemen and catchers carry noticeably more mass relative to their height, frequently topping 220 pounds to withstand collisions and deliver power at the plate. Pitchers dominate the right side of the distribution, frequently standing 6'4" or taller.
+
+These patterns are compelling because they illustrate how positional demands shape the physical composition of professional rosters. Long levers give pitchers greater extension and release velocity toward home plate, whereas infield defense selects for compact agility. Rather than converging toward a single uniform athletic build, Major League Baseball requires specialized body profiles tailored to the specific mechanics of each position.
+
