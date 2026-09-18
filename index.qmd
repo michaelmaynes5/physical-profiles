@@ -36,14 +36,13 @@ In baseball, physical traits such as height and weight often cluster around posi
 We then examine **how many MLB teams have the exact same number of physically similar players**.
 
 ```{r}
-ggplot(team_distribution, aes(x = factor(n_lookalikes), y = num_teams)) +
-  geom_col(fill = "steelblue") +
-  geom_text(aes(label = num_teams), vjust = -0.5, size = 4) +
+ggplot(players, aes(x = height_inches, y = weight, color = position)) +
+  geom_jitter(alpha = 0.6) +
   labs(
-    title = "Number of MLB Teams by Count of Physically Matching Players",
-    subtitle = "Matches defined as teammates sharing identical height and weight",
-    x = "Number of Matching Players on Team",
-    y = "Number of MLB Teams",
+    title = "MLB Player Height vs. Weight by Position",
+    x = "Height (inches)",
+    y = "Weight (pounds)",
+    color = "Position",
     caption = "Source: 2024 MLB Player Data"
   ) +
   theme_minimal() +
