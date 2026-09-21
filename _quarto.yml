@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Similar Players on MLB Teams"
+  title: "Physical Profiles"
   navbar:
     left:
       - href: index.qmd
