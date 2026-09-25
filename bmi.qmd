@@ -1,0 +1,39 @@
+---
+title: "Body Mass & Physical Demands"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+
+players <- read_csv("data/players.csv", show_col_types = FALSE) |>
+  mutate(bmi = round((weight / (height_inches^2)) * 703, 1))
+```
+
+## How Positional Roles Shape Body Density
+
+In baseball, sheer height only tells part of the story. Body Mass Index (BMI)—calculated from an athlete's weight relative to height—illustrates the structural density required by different fielding responsibilities.
+
+```{r}
+#| fig-width: 8
+#| fig-height: 5
+
+players |>
+  filter(!is.na(bmi), !is.na(position)) |>
+  mutate(position = fct_reorder(position, bmi, .fun = median)) |>
+  ggplot(aes(x = bmi, y = position, fill = position)) +
+  geom_boxplot(alpha = 0.7, show.legend = FALSE) +
+  labs(
+    title = "BMI Distribution by Defensive Position (2024 MLB)",
+    x = "Body Mass Index (BMI)",
+    y = "Position",
+    caption = "Source: 2024 MLB Player Profiles"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+First basemen and catchers exhibit the highest median BMIs across the league, reflecting the muscular bulk and leverage needed for power hitting and absorbing home-plate contact. In contrast, shortstops and second basemen maintain leaner frames to maximize lateral mobility and quick reaction times.

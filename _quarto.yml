@@ -8,9 +8,13 @@ website:
       - href: index.qmd
         text: Home
       - href: story.qmd
-        text: Story
+        text: Positional Archetypes
+      - href: bmi.qmd
+        text: Body Mass
       - href: exploration.qmd
-        text: Exploration
+        text: Positional Breakdown
+      - href: player-explorer.qmd
+        text: Player Explorer
       - href: about.qmd
         text: About
 

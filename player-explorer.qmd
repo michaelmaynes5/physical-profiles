@@ -1,0 +1,39 @@
+---
+title: "Interactive Player Explorer"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(DT)
+
+players <- read_csv("data/players.csv", show_col_types = FALSE) |>
+  mutate(bmi = round((weight / (height_inches^2)) * 703, 1))
+```
+
+## Explore Active Players
+
+Search and sort through 2024 MLB player profiles. You can search by player name, team, or position to see how individual athletes compare across physical metrics.
+
+```{r}
+players |>
+  select(
+    Player = full_name,
+    Team = team_name,
+    Position = position,
+    `Height (in)` = height_inches,
+    `Weight (lbs)` = weight,
+    BMI = bmi,
+    Bats = bat_side,
+    Throws = pitch_hand
+  ) |>
+  datatable(
+    filter = "top",
+    options = list(pageLength = 10, autoWidth = TRUE),
+    rownames = FALSE
+  )
+```

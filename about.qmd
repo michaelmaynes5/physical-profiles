@@ -2,10 +2,14 @@
 title: "About"
 ---
 
-## About the Project
+## About Me
 
-This project analyzes physical profiles across Major League Baseball teams, focusing on how many teams share the same count of physically similar teammates (matching height and weight).
+My name is Michael Maynes, an undergraduate student at [New College of Florida](https://www.ncf.edu/). 
 
-Created by Michael Maynes as part of Milestone 4 for *Preceptor's Primer for Bayesian Data Science*.
+- **Contact:** [m.maynes30@ncf.edu](mailto:m.maynes30@ncf.edu)
+- **GitHub:** [michaelmaynes5](https://github.com/michaelmaynes5)
+- **Project Repository:** [github.com/michaelmaynes5/physical-profiles](https://github.com/michaelmaynes5/physical-profiles)
 
-Project repository: [GitHub Repository](https://github.com/michaelmaynes6/milestone-4)
+## About the Data
+
+The data used in this project comes from official 2024 Major League Baseball roster information and player physical profiles, cross-referenced with historical statistics from the [Sean Lahman Baseball Database](https://www.seanlahman.com/baseball-archive/statistics/). The dataset tracks biometric measurements—including height in inches, weight in pounds, primary fielding position, batting side, and pitching hand—across active players on 30 Major League teams during the 2024 season.
