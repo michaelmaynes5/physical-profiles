@@ -8,7 +8,7 @@
 
 <meta name="author" content="Michael Maynes">
 
-<title>Physical Profiles Across MLB Positions – Physical Profiles</title>
+<title>Height, Weight, and the Evolution of Baseball Players – Physical Profiles</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Physical Profiles Across MLB Positions</h1>
+<h1 class="title">Height, Weight, and the Evolution of Baseball Players</h1>
 </div>
 
 
@@ -159,20 +159,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="how-does-player-physique-vary-by-position" class="level2">
-<h2 class="anchored" data-anchor-id="how-does-player-physique-vary-by-position">How Does Player Physique Vary by Position?</h2>
-<p>This scatter plot visualizes the physical profiles of Major League Baseball players active during the 2024 season, sourced from official MLB roster data. Each point represents an individual player plotted by their height in inches along the horizontal axis and their weight in pounds along the vertical axis, colored by their fielding position. Points are slightly jittered to make overlapping body types visible.</p>
+<section id="have-mlb-players-been-getting-bigger" class="level2">
+<h2 class="anchored" data-anchor-id="have-mlb-players-been-getting-bigger">Have MLB Players Been Getting Bigger?</h2>
+<p>When examining a single season in isolation, Major League Baseball rosters feature approximately 1,500 active players distributed across a spectrum of heights and weights. While that snapshot shows how different defensive positions demand distinct physical attributes, it leaves an essential historical question unanswered: have baseball players actually been getting bigger over time?</p>
+<p>By expanding our scope across multiple benchmark seasons spanning over six decades—1960, 1980, 2000, and 2023—our dataset expands comfortably into the thousands, encompassing over 4,100 player observations. This multi-season perspective allows us to observe not only how height and weight relate to one another within the sport, but also how the entire distribution of professional ballplayers has steadily shifted across modern eras.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/multi-season-scatter-1.png" class="img-fluid figure-img" width="912"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The visualization demonstrates that while height and weight correlate generally, coloring by position reveals distinct physical archetypes across the diamond. Middle infielders—second basemen and shortstops—cluster tightly near the lower-left region (typically 5’9” to 6’1” and 170 to 200 pounds), where lateral quickness and rapid transitions matter most. In contrast, first basemen and catchers carry noticeably more mass relative to their height, frequently topping 220 pounds to withstand collisions and deliver power at the plate. Pitchers dominate the right side of the distribution, frequently standing 6’4” or taller.</p>
-<p>These patterns are compelling because they illustrate how positional demands shape the physical composition of professional rosters. Long levers give pitchers greater extension and release velocity toward home plate, whereas infield defense selects for compact agility. Rather than converging toward a single uniform athletic build, Major League Baseball requires specialized body profiles tailored to the specific mechanics of each position.</p>
+<p>The scatterplot reveals a striking upward migration across the modern era. In both 1960 and 1980, the average major leaguer stood approximately 6 feet 1 inch tall and weighed around 186 pounds. During these decades, player body types were comparatively lean, with very few athletes exceeding 225 pounds regardless of their height. Speed, defensive agility, and traditional conditioning dominated baseball preparation, keeping weight distributions relatively compact.</p>
+<p>By the 2000 season, the physical demands and incentives of the sport had shifted dramatically. Emphasizing power hitting, velocity, and specialized year-round weight training, the average player weight jumped by ten pounds to over 196 pounds. The upward trend lines demonstrate that this was not merely a consequence of players becoming taller; at virtually every height level along the x-axis, players from 2000 weighed noticeably more than their counterparts from twenty or forty years prior.</p>
+<p>The 2023 season represents the culmination of this trend. Today’s average major league player stands nearly 6 feet 2 inches tall and weighs approximately 208 pounds—more than 21 pounds heavier than the average player from 1960 or 1980. The cloud of data points for 2023 extends substantially higher along the vertical axis, featuring dozens of players who weigh between 230 and 280 pounds while maintaining the athletic mobility required on the field. The data across thousands of players clearly demonstrates that the modern professional baseball player has grown both measurably taller and substantially heavier than in previous generations.</p>
 
 
 </section>
@@ -251,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/michaelmaynes5\.github\.io\/physical-profiles\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

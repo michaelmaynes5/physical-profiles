@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Michael Maynes">
 
 <title>The Story: Shapes of the Game – Physical Profiles</title>
 <style>
@@ -142,6 +143,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Michael Maynes </p>
+          </div>
+  </div>
     
   
     
@@ -152,16 +159,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="physical-archetypes-in-baseball" class="level2">
-<h2 class="anchored" data-anchor-id="physical-archetypes-in-baseball">Physical Archetypes in Baseball</h2>
-<p>Baseball has always been a game of specialized roles. Unlike sports where athletes converge on a single ideal body type, baseball demands vastly different physical profiles depending on what each position requires on the field.</p>
-<p>When we inspect height and weight across positions, distinct physical archetypes immediately stand out:</p>
+<section id="physical-archetypes-in-modern-baseball" class="level2">
+<h2 class="anchored" data-anchor-id="physical-archetypes-in-modern-baseball">Physical Archetypes in Modern Baseball</h2>
+<p>Baseball is fundamentally a game of specialized defensive and offensive roles. Unlike sports where athletes converge toward a single uniform body type, baseball demands vastly different physical profiles depending on what each position requires on the field. A player who excels at tracking down grounders in the hole between short and third brings a completely different set of physical mechanics to the game than a pitcher generating downward plane from the mound.</p>
+<p>When we inspect height and weight distributions across positions, distinct physical archetypes immediately stand out.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="story_files/figure-html/story-archetypes-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As the scatter plot above illustrates, modern rosters divide neatly into specialized physical clusters:</p>
 <ul>
-<li><strong>Pitchers</strong> dominate the upper bounds of height, using longer levers and arm extension to generate velocity and steep release angles towards home plate.</li>
-<li><strong>Catchers and First Basemen</strong> carry greater mass relative to their height, providing durability behind the plate and power at the corners.</li>
-<li><strong>Middle Infielders (Second Basemen and Shortstops)</strong> cluster tightly in the lower-left corner of height and weight distributions, prioritizing agility, quick lateral acceleration, and swift transfer times over raw size.</li>
+<li><strong>Pitchers</strong> dominate the upper reaches of height, frequently standing 6’3” to 6’6” or taller. Longer limbs create greater extension toward home plate, shortening the perceived distance to the batter and creating steeper release angles that make fastballs and breaking pitches more difficult to track.</li>
+<li><strong>Corners and Catchers</strong> carry substantially more mass relative to their height. Catchers absorb hundreds of high-velocity pitches and physical strain squatting for nine innings, while first basemen provide large targets at the bag and are counted on for raw extra-base power at the plate.</li>
+<li><strong>Middle Infielders (Second Basemen and Shortstops)</strong> cluster tightly in the lower-left quadrant of the distribution. These players typically range from 5’9” to 6’1” and 175 to 200 pounds, where compact center of gravity, rapid lateral acceleration, and swift transfer times outweigh pure physical size.</li>
 </ul>
-<p>Looking at these physical groupings reveals how role specialization shapes the roster of modern Major League Baseball.</p>
+<p>Rather than pursuing a single athletic physique, Major League front offices and development systems deliberately select for physical specialization. The result is a sport where contrasting body types share the same field, each optimized for the split-second demands of their position.</p>
 
 
 </section>
@@ -240,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/michaelmaynes5\.github\.io\/physical-profiles\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
