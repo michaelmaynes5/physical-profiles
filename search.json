@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Physical Profiles Across MLB Positions",
+    "section": "",
+    "text": "This scatter plot visualizes the physical profiles of Major League Baseball players active during the 2024 season, sourced from official MLB roster data. Each point represents an individual player plotted by their height in inches along the horizontal axis and their weight in pounds along the vertical axis, colored by their fielding position. Points are slightly jittered to make overlapping body types visible.\n\n\n\n\n\n\n\n\n\nThe visualization demonstrates that while height and weight correlate generally, coloring by position reveals distinct physical archetypes across the diamond. Middle infielders—second basemen and shortstops—cluster tightly near the lower-left region (typically 5’9” to 6’1” and 170 to 200 pounds), where lateral quickness and rapid transitions matter most. In contrast, first basemen and catchers carry noticeably more mass relative to their height, frequently topping 220 pounds to withstand collisions and deliver power at the plate. Pitchers dominate the right side of the distribution, frequently standing 6’4” or taller.\nThese patterns are compelling because they illustrate how positional demands shape the physical composition of professional rosters. Long levers give pitchers greater extension and release velocity toward home plate, whereas infield defense selects for compact agility. Rather than converging toward a single uniform athletic build, Major League Baseball requires specialized body profiles tailored to the specific mechanics of each position."
+  },
+  {
+    "objectID": "index.html#how-does-player-physique-vary-by-position",
+    "href": "index.html#how-does-player-physique-vary-by-position",
+    "title": "Physical Profiles Across MLB Positions",
+    "section": "",
+    "text": "This scatter plot visualizes the physical profiles of Major League Baseball players active during the 2024 season, sourced from official MLB roster data. Each point represents an individual player plotted by their height in inches along the horizontal axis and their weight in pounds along the vertical axis, colored by their fielding position. Points are slightly jittered to make overlapping body types visible.\n\n\n\n\n\n\n\n\n\nThe visualization demonstrates that while height and weight correlate generally, coloring by position reveals distinct physical archetypes across the diamond. Middle infielders—second basemen and shortstops—cluster tightly near the lower-left region (typically 5’9” to 6’1” and 170 to 200 pounds), where lateral quickness and rapid transitions matter most. In contrast, first basemen and catchers carry noticeably more mass relative to their height, frequently topping 220 pounds to withstand collisions and deliver power at the plate. Pitchers dominate the right side of the distribution, frequently standing 6’4” or taller.\nThese patterns are compelling because they illustrate how positional demands shape the physical composition of professional rosters. Long levers give pitchers greater extension and release velocity toward home plate, whereas infield defense selects for compact agility. Rather than converging toward a single uniform athletic build, Major League Baseball requires specialized body profiles tailored to the specific mechanics of each position."
+  },
+  {
+    "objectID": "story.html",
+    "href": "story.html",
+    "title": "The Story: Shapes of the Game",
+    "section": "",
+    "text": "Baseball has always been a game of specialized roles. Unlike sports where athletes converge on a single ideal body type, baseball demands vastly different physical profiles depending on what each position requires on the field.\nWhen we inspect height and weight across positions, distinct physical archetypes immediately stand out:\n\nPitchers dominate the upper bounds of height, using longer levers and arm extension to generate velocity and steep release angles towards home plate.\nCatchers and First Basemen carry greater mass relative to their height, providing durability behind the plate and power at the corners.\nMiddle Infielders (Second Basemen and Shortstops) cluster tightly in the lower-left corner of height and weight distributions, prioritizing agility, quick lateral acceleration, and swift transfer times over raw size.\n\nLooking at these physical groupings reveals how role specialization shapes the roster of modern Major League Baseball."
+  },
+  {
+    "objectID": "story.html#physical-archetypes-in-baseball",
+    "href": "story.html#physical-archetypes-in-baseball",
+    "title": "The Story: Shapes of the Game",
+    "section": "",
+    "text": "Baseball has always been a game of specialized roles. Unlike sports where athletes converge on a single ideal body type, baseball demands vastly different physical profiles depending on what each position requires on the field.\nWhen we inspect height and weight across positions, distinct physical archetypes immediately stand out:\n\nPitchers dominate the upper bounds of height, using longer levers and arm extension to generate velocity and steep release angles towards home plate.\nCatchers and First Basemen carry greater mass relative to their height, providing durability behind the plate and power at the corners.\nMiddle Infielders (Second Basemen and Shortstops) cluster tightly in the lower-left corner of height and weight distributions, prioritizing agility, quick lateral acceleration, and swift transfer times over raw size.\n\nLooking at these physical groupings reveals how role specialization shapes the roster of modern Major League Baseball."
+  },
+  {
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "Data Exploration",
+    "section": "",
+    "text": "To understand how physical characteristics differ across the diamond, we can summarize average height and weight for each position in the 2024 MLB player dataset.\n\n\n\n\n\nPosition\nPlayer Count\nAvg Height (in)\nAvg Weight (lbs)\n\n\n\n\nPitcher\n802\n74.7\n213.5\n\n\nOutfielder\n224\n72.3\n204.7\n\n\nCatcher\n94\n71.7\n214.7\n\n\nThird Base\n80\n72.1\n206.0\n\n\nFirst Base\n71\n72.9\n222.8\n\n\nShortstop\n68\n71.9\n193.3\n\n\nSecond Base\n63\n70.6\n191.2\n\n\nDesignated Hitter\n41\n72.6\n217.6\n\n\nOutfield\n10\n71.8\n197.2\n\n\nTwo-Way Player\n1\n76.0\n210.0\n\n\n\n\n\nFirst basemen and catchers average the highest body weights, while middle infielders (second basemen and shortstops) are the lightest and most compact. Pitchers stand as the tallest positional cohort on average."
+  },
+  {
+    "objectID": "exploration.html#positional-breakdown",
+    "href": "exploration.html#positional-breakdown",
+    "title": "Data Exploration",
+    "section": "",
+    "text": "To understand how physical characteristics differ across the diamond, we can summarize average height and weight for each position in the 2024 MLB player dataset.\n\n\n\n\n\nPosition\nPlayer Count\nAvg Height (in)\nAvg Weight (lbs)\n\n\n\n\nPitcher\n802\n74.7\n213.5\n\n\nOutfielder\n224\n72.3\n204.7\n\n\nCatcher\n94\n71.7\n214.7\n\n\nThird Base\n80\n72.1\n206.0\n\n\nFirst Base\n71\n72.9\n222.8\n\n\nShortstop\n68\n71.9\n193.3\n\n\nSecond Base\n63\n70.6\n191.2\n\n\nDesignated Hitter\n41\n72.6\n217.6\n\n\nOutfield\n10\n71.8\n197.2\n\n\nTwo-Way Player\n1\n76.0\n210.0\n\n\n\n\n\nFirst basemen and catchers average the highest body weights, while middle infielders (second basemen and shortstops) are the lightest and most compact. Pitchers stand as the tallest positional cohort on average."
+  },
+  {
+    "objectID": "bmi.html",
+    "href": "bmi.html",
+    "title": "Body Mass & Physical Demands",
+    "section": "",
+    "text": "In baseball, sheer height only tells part of the story. Body Mass Index (BMI)—calculated from an athlete’s weight relative to height—illustrates the structural density required by different fielding responsibilities.\n\n\n\n\n\n\n\n\n\nFirst basemen and catchers exhibit the highest median BMIs across the league, reflecting the muscular bulk and leverage needed for power hitting and absorbing home-plate contact. In contrast, shortstops and second basemen maintain leaner frames to maximize lateral mobility and quick reaction times."
+  },
+  {
+    "objectID": "bmi.html#how-positional-roles-shape-body-density",
+    "href": "bmi.html#how-positional-roles-shape-body-density",
+    "title": "Body Mass & Physical Demands",
+    "section": "",
+    "text": "In baseball, sheer height only tells part of the story. Body Mass Index (BMI)—calculated from an athlete’s weight relative to height—illustrates the structural density required by different fielding responsibilities.\n\n\n\n\n\n\n\n\n\nFirst basemen and catchers exhibit the highest median BMIs across the league, reflecting the muscular bulk and leverage needed for power hitting and absorbing home-plate contact. In contrast, shortstops and second basemen maintain leaner frames to maximize lateral mobility and quick reaction times."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Michael Maynes, an undergraduate student at New College of Florida.\n\nContact: m.maynes30@ncf.edu\nGitHub: michaelmaynes5\nProject Repository: github.com/michaelmaynes5/physical-profiles"
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
+    "section": "",
+    "text": "My name is Michael Maynes, an undergraduate student at New College of Florida.\n\nContact: m.maynes30@ncf.edu\nGitHub: michaelmaynes5\nProject Repository: github.com/michaelmaynes5/physical-profiles"
+  },
+  {
+    "objectID": "about.html#about-the-data",
+    "href": "about.html#about-the-data",
+    "title": "About",
+    "section": "About the Data",
+    "text": "About the Data\nThe data used in this project comes from official 2024 Major League Baseball roster information and player physical profiles, cross-referenced with historical statistics from the Sean Lahman Baseball Database. The dataset tracks biometric measurements—including height in inches, weight in pounds, primary fielding position, batting side, and pitching hand—across active players on 30 Major League teams during the 2024 season."
+  },
+  {
+    "objectID": "player-explorer.html",
+    "href": "player-explorer.html",
+    "title": "Interactive Player Explorer",
+    "section": "",
+    "text": "Search and sort through 2024 MLB player profiles. You can search by player name, team, or position to see how individual athletes compare across physical metrics."
+  },
+  {
+    "objectID": "player-explorer.html#explore-active-players",
+    "href": "player-explorer.html#explore-active-players",
+    "title": "Interactive Player Explorer",
+    "section": "",
+    "text": "Search and sort through 2024 MLB player profiles. You can search by player name, team, or position to see how individual athletes compare across physical metrics."
+  }
+]
