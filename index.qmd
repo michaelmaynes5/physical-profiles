@@ -1,0 +1,41 @@
+---
+title: "Physical Profiles Across MLB Positions"
+author: "Michael Maynes"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+
+# Read the player data collected from the 2024 MLB season
+players <- read_csv("data/players.csv", show_col_types = FALSE)
+```
+
+## How Does Player Physique Vary by Position?
+
+This scatter plot visualizes the physical profiles of Major League Baseball players active during the 2024 season, sourced from official MLB roster data. Each point represents an individual player plotted by their height in inches along the horizontal axis and their weight in pounds along the vertical axis, colored by their fielding position. Points are slightly jittered to make overlapping body types visible.
+
+```{r}
+ggplot(players, aes(x = height_inches, y = weight, color = position)) +
+  geom_jitter(alpha = 0.6) +
+  labs(
+    title = "MLB Player Height vs. Weight by Position",
+    x = "Height (inches)",
+    y = "Weight (pounds)",
+    color = "Position",
+    caption = "Source: 2024 MLB Player Data"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.title = element_text(face = "bold")
+  )
+```
+
+The visualization demonstrates that while height and weight correlate generally, coloring by position reveals distinct physical archetypes across the diamond. Middle infielders—second basemen and shortstops—cluster tightly near the lower-left region (typically 5'9" to 6'1" and 170 to 200 pounds), where lateral quickness and rapid transitions matter most. In contrast, first basemen and catchers carry noticeably more mass relative to their height, frequently topping 220 pounds to withstand collisions and deliver power at the plate. Pitchers dominate the right side of the distribution, frequently standing 6'4" or taller.
+
+These patterns are compelling because they illustrate how positional demands shape the physical composition of professional rosters. Long levers give pitchers greater extension and release velocity toward home plate, whereas infield defense selects for compact agility. Rather than converging toward a single uniform athletic build, Major League Baseball requires specialized body profiles tailored to the specific mechanics of each position.
+
